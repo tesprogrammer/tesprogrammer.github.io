@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta description="Assignment 2 Part 2" content="This is assignment 2 for CIS 114">
+  <title>Assignment 2</title>
+
+  <style>
+    body {
+      font-size: 20px;
+      margin-left: 10px;
+      padding: 30px;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    .value {
+      text-align: right;
+    }
+
+    input:focus {
+      background-color: rgb(206, 241, 253);
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Assignment 2 Extra Curricular</h2>
+  <a href="hw1.html">Return to Homework 1 page</a>
+  <br>
+  <a href="hw2.html">Back to Homework 2 </a><br><br>
+  <br>
+
+  <form name="myform">
+    <table>
+      <tr>
+        <th class="title">Currency</th>
+        <th class="title">Rate</th>
+        <th class="title">Value</th>
+      </tr>
+      <tr>
+        <td>Europe</td>
+        <td>0.84</td>
+        <td class="value" id="Euro" readonly></td>
+      </tr>
+      <tr>
+        <td>Canadian Dollar</td>
+        <td>1.23</td>
+        <td class="value" id="CD" readonly></td>
+      </tr>
+      <tr>
+        <td>Hong Kong Dollar</td>
+        <td>7.76</td>
+        <td class="value" id="HKD" readonly></td>
+      </tr>
+      <tr>
+        <td>Japense Yen</td>
+        <td>110.80</td>
+        <td class="value" id="Yen" readonly></td>
+      </tr>
+      <tr>
+        <td>Mexican Peso</td>
+        <td>19.82</td>
+        <td class="value" id="Peso" readonly></td>
+      </tr>
+      <tr>
+        <th colspan="2">Enter Amount of U.S. Dollars</th>
+        <td><input type="number" id="num1" size="10" style="text-align: right;"></td>
+      </tr>
+
+    </table>
+    <br>
+  </form>
+
+
+  <script>
+    document.getElementById("num1").onchange = function () { myFunction() };
+
+    function myFunction() {
+
+      number1 = document.forms["myform"].elements["num1"].value;
+      n1 = parseInt(number1);
+
+      document.getElementById("Euro").textContent = (n1 * .84).toFixed(2);
+      document.getElementById("CD").textContent = (n1 * 1.23).toFixed(2);
+      document.getElementById("HKD").textContent = (n1 * 7.76).toFixed(2);
+      document.getElementById("Yen").textContent = (n1 * 110.80).toFixed(2);
+      document.getElementById("Peso").textContent = (n1 * 19.82).toFixed(2);
+    }
+  </script>
+
+
+
+</body>
+
+</html>
