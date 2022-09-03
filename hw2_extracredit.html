@@ -8,35 +8,10 @@
   <meta description="Assignment 2 Part 2" content="This is assignment 2 for CIS 114">
   <title>Assignment 2</title>
 
-  <style>
-    body {
-      font-size: 20px;
-      margin-left: 10px;
-      padding: 30px;
-    }
+  <link href="hw2_extracredit.css" rel="stylesheet" />
 
-    table,
-    th,
-    td {
-      border: 1px solid;
-    }
+  <script src="hw2_extracredit.js" async></script>
 
-    table {
-      border-collapse: collapse;
-    }
-
-    .title {
-      text-align: center;
-    }
-
-    .value {
-      text-align: right;
-    }
-
-    input:focus {
-      background-color: rgb(206, 241, 253);
-    }
-  </style>
 </head>
 
 <body>
@@ -86,25 +61,6 @@
     </table>
     <br>
   </form>
-
-
-  <script>
-    document.getElementById("num1").onchange = function () { myFunction() };
-
-    function myFunction() {
-
-      number1 = document.forms["myform"].elements["num1"].value;
-      n1 = parseInt(number1);
-
-      document.getElementById("Euro").textContent = (n1 * .84).toFixed(2);
-      document.getElementById("CD").textContent = (n1 * 1.23).toFixed(2);
-      document.getElementById("HKD").textContent = (n1 * 7.76).toFixed(2);
-      document.getElementById("Yen").textContent = (n1 * 110.80).toFixed(2);
-      document.getElementById("Peso").textContent = (n1 * 19.82).toFixed(2);
-    }
-  </script>
-
-
 
 </body>
 
